@@ -9,7 +9,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/flamengo-branca.png",
     alt: "Camisa branca do Flamengo",
     price: 199.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
     featured: true,
   },
   {
@@ -21,7 +21,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/sao-paulo.png",
     alt: "Camisa do São Paulo",
     price: 199.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
   },
   {
     id: "palmeiras",
@@ -32,7 +32,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/palmeiras.png",
     alt: "Camisa do Palmeiras",
     price: 199.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
   },
   {
     id: "barcelona-kit",
@@ -43,7 +43,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/barcelona-kit.png",
     alt: "Conjunto do Barcelona",
     price: 279.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
     badge: "Conjunto",
   },
   {
@@ -55,7 +55,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/flamengo-treino.png",
     alt: "Conjunto de treino do Flamengo",
     price: 249.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
     badge: "Treino",
   },
   {
@@ -67,7 +67,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/vasco.png",
     alt: "Camisa do Vasco",
     price: 199.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
   },
   {
     id: "internacional",
@@ -78,7 +78,7 @@ window.BRUNO_PRODUCTS = [
     image: "assets/camisas/internacional.png",
     alt: "Camisa do Internacional",
     price: 199.9,
-    sizes: ["P", "M", "G", "GG"],
+    sizes: ["P", "M", "G", "GG", "2XL"],
   },
 ];
 

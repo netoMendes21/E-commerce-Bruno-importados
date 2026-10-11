@@ -43,7 +43,9 @@
   const filterButtons = [...document.querySelectorAll(".filter")];
   const emptyState = document.querySelector("#empty-state");
   const resultCount = document.querySelector("#result-count");
+  const cartToast = document.querySelector("#cart-toast");
   let activeFilter = "all";
+  let cartToastTimeout;
 
   const formatPrice = (price) =>
     new Intl.NumberFormat("pt-BR", {
@@ -78,13 +80,16 @@
           <p>${product.team.toUpperCase()}</p>
           <h3>${product.name}</h3>
           <span class="product-type">${product.typeLabel}</span>
-          <strong class="product-price">${formatPrice(product.price)}</strong>
-          <label class="sr-only" for="size-${product.id}">Tamanho</label>
-          <select class="product-size" id="size-${product.id}">
-            ${product.sizes.map((size) => `<option>${size}</option>`).join("")}
-          </select>
+          <div class="product-purchase-row">
+            <strong class="product-price">${formatPrice(product.price)}</strong>
+            <div class="size-picker">
+              <label class="size-label" for="size-${product.id}">Tamanho</label>
+              <select class="product-size" id="size-${product.id}">
+                ${product.sizes.map((size) => `<option>${size}</option>`).join("")}
+              </select>
+            </div>
+          </div>
           <button type="button" class="product-add" data-add="${product.id}">Adicionar ao carrinho</button>
-          <span class="product-status" aria-live="polite"></span>
         </div>
       </article>`,
       )
@@ -121,10 +126,15 @@
     const addButton = event.target.closest("[data-add]");
     if (!addButton) return;
     const productCard = addButton.closest(".product-card");
-    const selectedSize = productCard.querySelector("select").value;
+    const selectedSize = productCard.querySelector(".product-size").value;
     BrunoCart.add(addButton.dataset.add, selectedSize);
-    productCard.querySelector(".product-status").textContent =
-      `Tamanho ${selectedSize} adicionado ao carrinho.`;
+    const addedProduct = products.find((product) => product.id === addButton.dataset.add);
+    cartToast.textContent = `✓ ${addedProduct.name} · Tamanho ${selectedSize} adicionado ao carrinho`;
+    cartToast.classList.add("is-visible");
+    window.clearTimeout(cartToastTimeout);
+    cartToastTimeout = window.setTimeout(() => {
+      cartToast.classList.remove("is-visible");
+    }, 3200);
   });
 
   renderProducts();

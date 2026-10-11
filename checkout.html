@@ -71,35 +71,49 @@
               autocomplete="email"
               required
             /><small class="field-error" data-error="email"></small
-            ><label for="payment-method">Método de pagamento</label
+            ><label for="payment-method">Forma de pagamento</label
             ><select id="payment-method" name="payment" required>
               <option value="">Selecione</option>
-              <option value="pix">Pix (demonstração)</option>
-              <option value="card">Cartão (demonstração)</option></select
-            ><small class="field-error" data-error="payment"></small
-            ><button class="product-add checkout-submit" type="submit">
+              <option value="pix">Pix</option>
+              <option value="card">Cartão de crédito</option></select
+            ><small class="field-error" data-error="payment"></small>
+            <div class="installment-field" id="installment-field" hidden>
+              <label for="installments">Parcelas</label>
+              <select id="installments" name="installments" disabled></select>
+              <small class="payment-note">Parcelamento demonstrativo em até 12x sem juros.</small>
+              <small class="field-error" data-error="installments"></small>
+            </div>
+            <button class="product-add checkout-submit" type="submit">
               Finalizar pedido de demonstração
             </button>
             <p id="checkout-message" class="checkout-message" role="status"></p>
           </form>
         </section>
       </section>
-      <section
+      <dialog
         class="order-confirmation"
         id="order-confirmation"
-        aria-live="polite"
-        hidden
+        aria-labelledby="confirmation-title"
+        aria-describedby="confirmation-details"
       >
+        <button
+          class="confirmation-close"
+          type="button"
+          aria-label="Fechar confirmação"
+          data-close-confirmation
+        >
+          ×
+        </button>
         <span class="confirmation-mark" aria-hidden="true">✓</span>
         <p class="eyebrow">Bruno Importados</p>
-        <h2>Pedido registrado!</h2>
+        <h2 id="confirmation-title">Pedido registrado!</h2>
         <p id="confirmation-details">
           Este é um pedido de demonstração. Nenhum pagamento foi processado.
         </p>
         <a class="button-primary" href="index.html#colecao"
           >VOLTAR À LOJA <span aria-hidden="true">→</span></a
         >
-      </section>
+      </dialog>
     </main>
     <footer class="site-footer">
       <a href="index.html" class="footer-brand"
