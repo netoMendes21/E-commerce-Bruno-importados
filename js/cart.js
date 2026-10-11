@@ -3,7 +3,9 @@
 
   function loadCartItems() {
     try {
-      const storedItems = JSON.parse(localStorage.getItem(cartStorageKey) || "[]");
+      const storedItems = JSON.parse(
+        localStorage.getItem(cartStorageKey) || "[]",
+      );
       return Array.isArray(storedItems) ? storedItems : [];
     } catch {
       return [];
@@ -13,12 +15,18 @@
   let cartItems = loadCartItems();
 
   function updateCartCount() {
-    const itemCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
+    const itemCount = cartItems.reduce(
+      (total, cartItem) => total + cartItem.quantity,
+      0,
+    );
     document.querySelectorAll("[data-cart-count]").forEach((countElement) => {
       countElement.textContent = itemCount > 99 ? "99+" : itemCount;
       const cartLink = countElement.closest(".cart-icon");
       if (cartLink) {
-        cartLink.setAttribute("aria-label", `Carrinho, ${itemCount} ${itemCount === 1 ? "item" : "itens"}`);
+        cartLink.setAttribute(
+          "aria-label",
+          `Carrinho, ${itemCount} ${itemCount === 1 ? "item" : "itens"}`,
+        );
       }
     });
   }
@@ -59,11 +67,16 @@
       }
     },
     count() {
-      return cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
+      return cartItems.reduce(
+        (total, cartItem) => total + cartItem.quantity,
+        0,
+      );
     },
     total(productList) {
       return cartItems.reduce((total, cartItem) => {
-        const matchingProduct = productList.find((product) => product.id === cartItem.id);
+        const matchingProduct = productList.find(
+          (product) => product.id === cartItem.id,
+        );
         return total + (matchingProduct?.price || 0) * cartItem.quantity;
       }, 0);
     },

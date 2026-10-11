@@ -3,7 +3,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "flamengo-branca",
     team: "Flamengo",
-    name: "Camisa branca",
+    name: "Camisa do Flamengo",
     type: "shirt",
     typeLabel: "Camisa",
     image: "assets/camisas/flamengo-branca.png",
@@ -15,7 +15,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "sao-paulo",
     team: "São Paulo",
-    name: "Camisa listrada",
+    name: "Camisa do São Paulo",
     type: "shirt",
     typeLabel: "Camisa",
     image: "assets/camisas/sao-paulo.png",
@@ -26,7 +26,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "palmeiras",
     team: "Palmeiras",
-    name: "Camisa verde",
+    name: "Camisa do Palmeiras",
     type: "shirt",
     typeLabel: "Camisa",
     image: "assets/camisas/palmeiras.png",
@@ -37,7 +37,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "barcelona-kit",
     team: "Barcelona",
-    name: "Conjunto preto",
+    name: "Conjunto do Barcelona",
     type: "kit",
     typeLabel: "Regata + short",
     image: "assets/camisas/barcelona-kit.png",
@@ -49,7 +49,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "flamengo-treino",
     team: "Flamengo",
-    name: "Conjunto de treino",
+    name: "Conjunto de treino do Flamengo",
     type: "training",
     typeLabel: "Regata + short",
     image: "assets/camisas/flamengo-treino.png",
@@ -61,7 +61,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "vasco",
     team: "Vasco",
-    name: "Camisa faixa diagonal",
+    name: "Camisa do Vasco",
     type: "shirt",
     typeLabel: "Camisa",
     image: "assets/camisas/vasco.png",
@@ -72,7 +72,7 @@ window.BRUNO_PRODUCTS = [
   {
     id: "internacional",
     team: "Internacional",
-    name: "Camisa vermelha",
+    name: "Camisa do Internacional",
     type: "shirt",
     typeLabel: "Camisa",
     image: "assets/camisas/internacional.png",
@@ -81,4 +81,5 @@ window.BRUNO_PRODUCTS = [
     sizes: ["P", "M", "G", "GG", "2XL"],
   },
 ];
+
 

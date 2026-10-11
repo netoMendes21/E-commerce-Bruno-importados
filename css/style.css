@@ -1195,6 +1195,7 @@ p {
   color: var(--text-color);
   font-size: 12px;
 }
+
 .cart-remove {
   padding: 7px 11px;
   border: 1px solid color-mix(in srgb, var(--accent-color) 55%, var(--border-color));
@@ -1282,7 +1283,11 @@ p {
 }
 
 .checkout-submit {
-  margin-top: 8px
+  width: fit-content;
+  min-height: 36px;
+  justify-self: center;
+  margin-top: 8px;
+  padding: 8px 18px
 }
 
 .checkout-message {
@@ -1495,6 +1500,7 @@ p {
     height: 40px
   }
 }
+
 dialog.order-confirmation {
   width: min(560px, calc(100% - 32px));
   max-width: none;
@@ -1900,4 +1906,3 @@ body {
   background: var(--accent-hover);
   color: #fff5df;
 }
-
