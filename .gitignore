@@ -4,4 +4,8 @@ node_modules/
 .env.*
 !.env.example
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> 354542fd9c76701107b8f5bc63a59e3e214bd308

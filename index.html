@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="pt-BR" data-theme="dark">
   <head>
@@ -229,3 +230,238 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+=======
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17262c" />
+    <meta
+      name="description"
+      content="Bruno Importados — camisas, times e seleções."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bruno Importados — Camisas, times e seleções</title>
+  </head>
+  <body data-theme="dark">
+    <aside class="promotions">
+      <div class="promo-carousel" role="region" aria-label="Ofertas da loja">
+        <div class="promo-viewport">
+          <div class="promotion-items">
+            <ul
+              class="promo-group"
+              aria-label="Frete grátis em qualquer pedido; troca rápida e grátis; mais 2% de desconto no Pix"
+            >
+              <li>FRETE GRÁTIS EM QUALQUER PEDIDO</li>
+              <li>TROCA RÁPIDA E GRÁTIS</li>
+              <li>+2% OFF NO PIX</li>
+            </ul>
+            <ul class="promo-group" aria-hidden="true">
+              <li>FRETE GRÁTIS EM QUALQUER PEDIDO</li>
+              <li>TROCA RÁPIDA E GRÁTIS</li>
+              <li>+2% OFF NO PIX</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <header class="site-header">
+      <div class="header-main">
+        <a class="brand" href="#inicio" aria-label="Bruno Importados, início">
+          <img
+            src="assets/logoDark.png"
+            alt="Bruno Importados — Camisas, times e seleções"
+            id="store-logo"
+          />
+        </a>
+        <form class="search-box" role="search" id="search-form">
+          <label class="sr-only" for="search">Buscar camisas e conjuntos</label>
+          <input
+            type="search"
+            placeholder="Buscar time ou produto"
+            id="search"
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Buscar">
+            <img src="assets/lupe.png" alt="" aria-hidden="true" />
+          </button>
+        </form>
+        <div class="header-actions">
+          <a
+            class="cart-icon"
+            href="checkout.html"
+            aria-label="Carrinho, 0 itens"
+            ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6M10 20h.01M18 20h.01"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            ><span class="cart-count" data-cart-count>0</span></a
+          >
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Alternar para o tema claro"
+          >
+            <span class="theme-symbol" aria-hidden="true"></span
+            ><span class="theme-label">Tema claro</span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav-bar" aria-label="Navegação principal">
+        <a href="#colecao">PRODUTOS</a>
+        <a href="#colecao" data-filter-link="shirt">CAMISA JOGADOR</a>
+        <a href="#colecao" data-filter-link="kit">KITS</a>
+        <a href="#colecao" data-filter-link="all">LANÇAMENTOS</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <a
+        href="#colecao"
+        class="hero-banner"
+        aria-label="Explore camisas de times e seleções"
+      >
+        <img
+          src="assets/banner-bruno-importados.svg"
+          alt="Bruno Importados — camisas de times e seleções"
+        />
+      </a>
+
+      <section class="benefits" aria-label="Vantagens da loja">
+        <div>
+          <span aria-hidden="true">✦</span> Frete grátis em qualquer pedido
+        </div>
+        <div><span aria-hidden="true">↻</span> Troca rápida e grátis</div>
+        <div><span aria-hidden="true">％</span> Mais 2% de desconto no Pix</div>
+      </section>
+
+      <section class="section categories-section" id="categorias">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Escolha o seu estilo</p>
+            <h1>Vista as suas cores</h1>
+          </div>
+          <p class="section-note">
+            Camisas, conjuntos e peças para acompanhar a sua torcida.
+          </p>
+        </div>
+        <div class="category-grid">
+          <a
+            class="category-card category-shirts"
+            href="#colecao"
+            data-filter-link="shirt"
+          >
+            <div>
+              <span>PARA TORCER</span>
+              <h2>Camisas</h2>
+              <b>VER MODELOS <i aria-hidden="true">→</i></b>
+            </div>
+            <img src="assets/camisas/sao-paulo.png" alt="" />
+          </a>
+          <a
+            class="category-card category-kits"
+            href="#colecao"
+            data-filter-link="kit"
+          >
+            <div>
+              <span>LOOK COMPLETO</span>
+              <h2>Kits</h2>
+              <b>CAMISA + SHORT <i aria-hidden="true">→</i></b>
+            </div>
+            <img src="assets/camisas/barcelona-kit.png" alt="" />
+          </a>
+          <a
+            class="category-card category-training"
+            href="#colecao"
+            data-filter-link="training"
+          >
+            <div>
+              <span>CONFORTO E MOVIMENTO</span>
+              <h2>Treino</h2>
+              <b>VER CONJUNTOS <i aria-hidden="true">→</i></b>
+            </div>
+            <img src="assets/camisas/flamengo-treino.png" alt="" />
+          </a>
+        </div>
+      </section>
+
+      <section class="collection" id="colecao">
+        <div class="section collection-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Seleção Bruno Importados</p>
+              <h2>Encontre a sua camisa</h2>
+            </div>
+            <p class="section-note" id="result-count" aria-live="polite">
+              Carregando produtos…
+            </p>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar produtos">
+            <button class="filter active" type="button" data-filter="all">
+              Todos
+            </button>
+            <button class="filter" type="button" data-filter="shirt">
+              Camisas
+            </button>
+            <button class="filter" type="button" data-filter="kit">Kits</button>
+            <button class="filter" type="button" data-filter="training">
+              Treino
+            </button>
+          </div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <p class="price-notice">
+            Preços ilustrativos para o protótipo; substitua pelos valores reais.
+          </p>
+          <p class="empty-state" id="empty-state" hidden>
+            Nenhum produto encontrado. Tente outra busca.
+          </p>
+        </div>
+      </section>
+
+      <section class="closing-banner">
+        <div>
+          <p class="eyebrow">Bruno Importados</p>
+          <h2>Times · Seleções</h2>
+          <p>Encontre a camisa da sua torcida.</p>
+        </div>
+        <a href="#colecao" class="button-primary"
+          >VER PRODUTOS <span aria-hidden="true">→</span></a
+        >
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <a href="#inicio" class="footer-brand"
+        ><img src="assets/logoDark.png" alt="Bruno Importados" id="footer-logo"
+      /></a>
+      <p>Camisas, times e seleções para vestir a sua paixão.</p>
+      <nav aria-label="Links do rodapé">
+        <a href="#colecao">Produtos</a><a href="#categorias">Categorias</a
+        ><a href="#inicio">Voltar ao início ↑</a>
+      </nav>
+      <small>© 2026 Bruno Importados · Todos os direitos reservados.</small>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+>>>>>>> 354542fd9c76701107b8f5bc63a59e3e214bd308
