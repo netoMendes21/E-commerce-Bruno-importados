@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Revise seu carrinho Bruno Importados." />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/theme-responsive.css" />
     <title>Carrinho — Bruno Importados</title>
   </head>
   <body data-theme="dark">
     <header class="site-header">
       <div class="header-main checkout-header">
-        <a class="brand" href="index.html"
-          ><img
+        <a class="brand" href="index.html" aria-label="Voltar à loja">
+          <img
             id="store-logo"
-            src="assets/logoDark.png"
+            src="assets/branding/logoDark.png"
             alt="Bruno Importados"
-        /></a>
+          />
+        </a>
+
         <h1 id="checkout-page-title">Seu carrinho</h1>
+
         <div class="header-actions">
-          <a
-            class="cart-icon"
-            href="checkout.html"
-            aria-label="Carrinho, 0 itens"
-            ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <a class="cart-icon" href="checkout.html" aria-label="Carrinho, 0 itens">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6M10 20h.01M18 20h.01"
                 fill="none"
@@ -30,68 +31,110 @@
                 stroke-width="1.8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              /></svg
-            ><span class="cart-count" data-cart-count>0</span></a
-          ><button class="theme-toggle" id="theme-toggle" type="button">
-            <span class="theme-symbol" aria-hidden="true"></span
-            ><span class="theme-label">Tema claro</span>
+              />
+            </svg>
+            <span class="cart-count" data-cart-count>0</span>
+          </a>
+
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Alternar para o tema claro"
+          >
+            <span class="theme-symbol" aria-hidden="true"></span>
+            <span class="theme-label">Tema claro</span>
           </button>
         </div>
       </div>
     </header>
+
     <main class="checkout-main">
       <a class="back-link" href="index.html#colecao">← Continuar comprando</a>
+
       <section class="checkout-layout" id="checkout-layout">
-        <div>
-          <h2>Itens escolhidos</h2>
+        <section aria-labelledby="cart-items-title">
+          <h2 id="cart-items-title">Itens escolhidos</h2>
           <div id="cart-items" class="cart-items" aria-live="polite"></div>
           <p id="cart-empty" class="empty-state" hidden>
             Seu carrinho está vazio.
           </p>
-        </div>
-        <section class="order-panel">
-          <h2>Resumo do pedido</h2>
+        </section>
+
+        <section class="order-panel" aria-labelledby="order-summary-title">
+          <h2 id="order-summary-title">Resumo do pedido</h2>
           <p class="price-notice">Preços ilustrativos para o protótipo.</p>
+
           <p class="order-total">
             Total <strong id="cart-total">R$ 0,00</strong>
           </p>
+
           <form id="checkout-form" novalidate>
-            <label for="customer-name">Nome</label
-            ><input
+            <label for="customer-name">Nome</label>
+            <input
               id="customer-name"
               name="name"
               autocomplete="name"
+              aria-describedby="name-error"
               required
-            /><small class="field-error" data-error="name"></small
-            ><label for="customer-email">E-mail</label
-            ><input
+            />
+            <small class="field-error" id="name-error" data-error="name"></small>
+
+            <label for="customer-email">E-mail</label>
+            <input
               id="customer-email"
               name="email"
               type="email"
               autocomplete="email"
+              aria-describedby="email-error"
               required
-            /><small class="field-error" data-error="email"></small
-            ><label for="payment-method">Forma de pagamento</label
-            ><select id="payment-method" name="payment" required>
+            />
+            <small class="field-error" id="email-error" data-error="email"></small>
+
+            <label for="payment-method">Forma de pagamento</label>
+            <select
+              id="payment-method"
+              name="payment"
+              aria-describedby="payment-error"
+              required
+            >
               <option value="">Selecione</option>
               <option value="pix">Pix</option>
-              <option value="card">Cartão de crédito</option></select
-            ><small class="field-error" data-error="payment"></small>
+              <option value="card">Cartão de crédito</option>
+            </select>
+            <small class="field-error" id="payment-error" data-error="payment"></small>
+
             <div class="installment-field" id="installment-field" hidden>
               <label for="installments">Parcelas</label>
-              <select id="installments" name="installments" disabled></select>
-              <small class="payment-note"
-                >Parcelamento demonstrativo em até 12x sem juros.</small
-              >
-              <small class="field-error" data-error="installments"></small>
+              <select
+                id="installments"
+                name="installments"
+                aria-describedby="installments-error"
+                disabled
+              ></select>
+              <small class="payment-note">
+                Parcelamento demonstrativo em até 12x sem juros.
+              </small>
+              <small
+                class="field-error"
+                id="installments-error"
+                data-error="installments"
+              ></small>
             </div>
+
             <button class="product-add checkout-submit" type="submit">
               Finalizar pedido
             </button>
-            <p id="checkout-message" class="checkout-message" role="status"></p>
+            <p
+              id="checkout-message"
+              class="checkout-message"
+              role="status"
+              aria-live="polite"
+            ></p>
           </form>
         </section>
       </section>
+
       <dialog
         class="order-confirmation"
         id="order-confirmation"
@@ -112,20 +155,28 @@
         <p id="confirmation-details">
           Este é um pedido de demonstração. Nenhum pagamento foi processado.
         </p>
-        <a class="button-primary" href="index.html#colecao"
-          >VOLTAR À LOJA <span aria-hidden="true">→</span></a
-        >
+        <a class="button-primary" href="index.html#colecao">
+          VOLTAR À LOJA <span aria-hidden="true">→</span>
+        </a>
       </dialog>
     </main>
+
     <footer class="site-footer">
-      <a href="index.html" class="footer-brand"
-        ><img src="assets/logoDark.png" alt="Bruno Importados" id="footer-logo"
-      /></a>
+      <a href="index.html" class="footer-brand">
+        <img
+          src="assets/branding/logoDark.png"
+          alt="Bruno Importados"
+          id="footer-logo"
+        />
+      </a>
       <p>Esta etapa é demonstrativa; nenhum pagamento será realizado.</p>
       <small>© 2026 Bruno Importados</small>
     </footer>
-    <script src="js/products.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/checkout.js"></script>
+
+    <script src="js/data/products.js"></script>
+    <script src="js/shared/format.js"></script>
+    <script src="js/features/cart.js"></script>
+    <script src="js/shared/theme.js"></script>
+    <script src="js/pages/checkout.js"></script>
   </body>
 </html>

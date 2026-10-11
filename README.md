@@ -33,20 +33,24 @@ e-commerce/
 ├── checkout.html               # Carrinho e checkout demonstrativo
 ├── README.md                   # Documentação do projeto
 ├── css/
-│   └── style.css               # Estilos, temas e responsividade
+│   ├── style.css               # Estilos-base e componentes
+│   └── theme-responsive.css    # Temas claro/escuro e responsividade
 ├── js/
-│   ├── main.js                 # Catálogo, busca, filtros e tema
-│   ├── products.js             # Dados dos produtos
-│   ├── cart.js                 # Carrinho e persistência no localStorage
-│   └── checkout.js             # Resumo, validação e confirmação
+│   ├── data/
+│   │   └── products.js         # Dados do catálogo
+│   ├── features/
+│   │   └── cart.js             # Carrinho e persistência no localStorage
+│   ├── pages/
+│   │   ├── home.js             # Busca, filtros e vitrine
+│   │   └── checkout.js         # Resumo, validação e confirmação
+│   └── shared/
+│       ├── format.js           # Formatação de preços
+│       └── theme.js            # Alternância entre temas
 └── assets/
+    ├── banners/                # Banners da loja
+    ├── branding/               # Logotipos
     ├── camisas/                # Imagens dos produtos
-    ├── banner-bruno-importados.svg
-    ├── logoDark.png
-    ├── logoLight.png
-    ├── icon-dark.png
-    ├── icon-light.png
-    └── lupe.png
+    └── icons/                  # Ícones da interface
 ```
 
 ## 📥 Como clonar o repositório
