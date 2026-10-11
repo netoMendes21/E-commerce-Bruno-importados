@@ -12,7 +12,7 @@ Loja virtual de camisas, kits e roupas de treino de times. O site apresenta um c
 
 ## 🛍️ Funcionalidades
 
-- Catálogo de produtos carregado dinamicamente a partir de um array JavaScript.
+- Catálogo de produtos
 - Busca instantânea por time, nome ou tipo de produto.
 - Filtros por camisas, kits e roupas de treino.
 - Seleção de tamanho: P, M, G, GG e 2XL.
